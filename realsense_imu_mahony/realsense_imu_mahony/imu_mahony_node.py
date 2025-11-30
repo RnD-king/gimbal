@@ -26,14 +26,14 @@ class GimbalImuNode(Node):
         self.declare_parameter('accel_topic', '/camera/camera/accel/sample')
 
         # Mahony 필터 게인 (센서 융합 속도)
-        self.declare_parameter('Kp', 2.0)
+        self.declare_parameter('Kp', 4.0)
         self.declare_parameter('Ki', 0.0)
 
         # [PD 제어 게인]
         # motor_kp: P게인 (클수록 복원력이 강해짐 / 너무 크면 진동)
         # motor_kd: D게인 (클수록 브레이크가 강해짐 / 너무 크면 고주파 소음)
-        self.declare_parameter('motor_kp', 3.0)
-        self.declare_parameter('motor_kd', 0.05)
+        self.declare_parameter('motor_kp', 4.0)
+        self.declare_parameter('motor_kd', 0.1)
 
         #  파라미터 선언 (기본값 60.0도)
         self.declare_parameter('safety_angle', 60.0)
@@ -319,3 +319,16 @@ if __name__ == '__main__':
 
 #앞으로 기울면 y증가
 #렌즈쪽에서 바라볼때 시계방향 x 감소
+
+
+
+
+
+
+
+
+
+
+
+
+

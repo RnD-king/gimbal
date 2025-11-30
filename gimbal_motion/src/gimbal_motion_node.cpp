@@ -38,7 +38,7 @@ public:
     // 모터 속도 스케일링 (입력값 -> DXL 값 변환 비율)
     // XM430 속도 단위: 0.229 RPM. 
     // PID 출력이 크면 이 값을 줄이고, 반응이 느리면 키우세요.
-    this->declare_parameter("velocity_scale", 80.0); 
+    this->declare_parameter("velocity_scale", 120.0); 
 
     std::string port_name = this->get_parameter("port_name").as_string();
     int baud_rate = this->get_parameter("baud_rate").as_int();
@@ -189,3 +189,10 @@ int main(int argc, char * argv[])
 
 
 //ros2 run gimbal_motion gimbal_motion_node
+
+
+
+
+
+
+
